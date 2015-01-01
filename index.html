@@ -90,7 +90,7 @@
 
 <p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.org.uk/">ABC notation</a> into a WAV file without too much tinkering.</p>
 
-<p>There are three variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.scipy.org/">NumPy</a>. It's supposed to be a little closer to a piano. (No competition for Pianoteq of course, but a reasonable fit for keyboard music.) Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
+<p>There are four variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.scipy.org/">NumPy</a>. It's supposed to be a little closer to a piano. No competition for Pianoteq of course, but a reasonable fit for keyboard music. PySynth E is similar, but an FM-synthesized e-piano so it sounds much brighter than B (slightly DX7 e-piano-like; I used the DX7 presets in <a href="http://dssi.sourceforge.net/hexter.html">hexter</a> as a basis). Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
 
 <p>The current release of the synthesizer is monophonic, i.e. it can only play one note at a time.  (Although successive notes can overlap in PySynth B and S, but not A.)  However, two output files can be mixed together as in the case of the stereo files below.</p>
 
@@ -128,7 +128,7 @@
 
 <h2><a name="h">Changes</a></h2>
 
-<p><b>V1.1</b> add the pysynth_e FM synth module and <tt>mixfiles.py</tt>.</p>
+<p><b>V1.1</b> adds the pysynth_e FM synth module and <tt>mixfiles.py</tt>.</p>
 
 <p><b>V1.0.1</b> fixes a minor issue with Pyglet sound playback and corrects the import path for PyAudio. Thanks again, Pranav!</p>
 
