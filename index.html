@@ -108,6 +108,7 @@
 
 <li>Stereo:</li>
 <ul>
+<li><a href="epiano.mp4">Bach: Invention #13, BWV 784</a> &mdash; PySynth <b>E</b></li>
 <li><a href="pysynth_bach.mp4">Bach: Bourrée from BWV 996</a> &mdash; PySynth <b>B</b></li>
 <li><a href="jesu.mp4">Bach: <i>Jesu, Joy of Man&rsquo;s Desiring</i></a> &mdash; PySynth <b>S</b> (treble) and <b>B</b> (bass) &sim; <a href="jesu.abc.txt">abc source</a></li>
 </ul>
@@ -117,15 +118,15 @@
 
 <p>Current <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archive of <b>all</b> PySynth modules:</p>
 
-<p align="center"><tt><a href="PySynth-1.0.1.tar.gz">PySynth-1.0.1.tar.gz</a></tt>&nbsp;<small>(2012-08-01)</small></p>
+<p align="center"><tt><a href="PySynth-1.1.tar.gz">PySynth-1.1.tar.gz</a></tt>&nbsp;<small>(2015-01-01)</small></p>
 
 <p>You can also browse the <a href="https://github.com/mdoege/PySynth">current repository</a> at  <a href="https://github.com/">GitHub</a> and obtain the source code by using the <a href="http://git-scm.com/">git</a> command <tt>git clone git://github.com/mdoege/PySynth.git</tt></p>
 
 <p>Individual modules can also be downloaded separately below.</p>
 
-<p><a href="https://github.com/pranavrc">Pranav Ravichandran</a> currently has a <a href="https://github.com/pranavrc/PySynth">fork</a> at GitHub where he is implementing some cool new features.</p>
-
 <h2><a name="h">Changes</a></h2>
+
+<p><b>V1.1</b> add the pysynth_e FM synth module and <tt>mixfiles.py</tt>.</p>
 
 <p><b>V1.0.1</b> fixes a minor issue with Pyglet sound playback and corrects the import path for PyAudio. Thanks again, Pranav!</p>
 
@@ -151,6 +152,10 @@
 
 <p>This module attempts to create a more piano-like sound with more harmonics. This version is polyphonic in the sense that it doesn&rsquo;t cut off previous notes when the next note sounds.</p>
 
+<h3>PySynth &ldquo;E&rdquo;</h3>
+
+<p>Based on PySynth B, this module creates a simple FM e-piano sound.</p>
+
 <h3>PySynth &ldquo;S&rdquo;</h3>
 
 <p>This module simulates a single plucked string with the <a href="http://en.wikipedia.org/wiki/Karplus-Strong_string_synthesis">Karplus-Strong algorithm</a> (think guitar or harpsichord). Due to the nature of this kind of synthesis, <b>higher frequency-notes in particular can be slightly out of tune with PySynth S</b>, as opposed to the other variants where the harmonics are exact. This could be remedied with a higher sampling rate, but that would also make it a little slow for Python.</p>
@@ -175,13 +180,17 @@
 
 <p>Detailed usage:</p>
 
-<pre>read_abc.py filename [num_song] [--syn_b/--syn_s]
+<pre>read_abc.py filename [num_song] [--syn_b/--syn_e/--syn_s]
 
 * num_song selects the song in the file corresponding to the number given
-* --syn_b and --syn_s can be added to use the PySynth B or PySynth S
+* --syn_b, --syn_e, and --syn_s can be added to use the PySynth B/E/S
     modules, respectively, instead of the default PySynth A</pre>
 
 <p>If you need a quick way to edit, visualize, and&mdash;in supported browsers&mdash;play an ABC music file, take a look at <a href="http://waterpigs.co.uk/pig/">ABCPig</a>.</p>
+
+<h3>Stereo mixer</h3>
+
+<p><tt>mixfiles.py</tt> mixes two mono audio files to create a stereo file, e.g.: <tt>python2 mixfiles.py right.wav left.wav both.wav</tt></p>
 
 <h3>Interactive command line environment</h3>
 
