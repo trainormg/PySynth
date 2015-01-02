@@ -96,8 +96,8 @@
 
 <p>If you need more powerful Python sound synthesis than PySynth offers, you might want to check out the <a href="http://code.google.com/p/pyo/">Pyo</a> toolkit.</p>
 
-<h2><a name="e">Examples</a></h2>
-<p>Here are some sample output files converted to MP4 format:</p>
+<h2><a name="e">Audio samples</a></h2>
+<p>Here are some WAV output files converted to MP4 format:</p>
 
 <ul>
 <li>Mono:</li>
@@ -118,13 +118,11 @@
 
 <h2><a name="d">Downloads</a></h2>
 
-<p>Current <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archive of <b>all</b> PySynth modules:</p>
+<p>Current <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archive of all PySynth modules:</p>
 
 <p align="center"><tt><a href="PySynth-1.1.tar.gz">PySynth-1.1.tar.gz</a></tt>&nbsp;<small>(2015-01-01)</small></p>
 
-<p>You can also browse the <a href="https://github.com/mdoege/PySynth">current repository</a> at  <a href="https://github.com/">GitHub</a> and obtain the source code by using the <a href="http://git-scm.com/">git</a> command <tt>git clone git://github.com/mdoege/PySynth.git</tt></p>
-
-<p>Individual modules can also be downloaded separately below.</p>
+<p>You can also <a href="https://github.com/mdoege/PySynth">browse the repository</a> at <a href="https://github.com/">GitHub</a> or obtain the source code with <a href="http://git-scm.com/">git</a> like this:<br>&nbsp;&nbsp;<tt>git clone git://github.com/mdoege/PySynth.git</tt></p>
 
 <h2><a name="h">Changes</a></h2>
 
@@ -142,13 +140,15 @@
 
 <p><b>V0.6</b>: Initial public release</p>
 
+<hr>
+
 <h2><a name="m">Synthesizer modules</a></h2>
 
-<p>(These modules take a list of notes and note lengths and use it to create a WAV file.)</p>
+<p>These modules take a list of notes and note lengths and use it to create a WAV file. Currently, they all require <a href="http://www.python.org/">Python v2.x</a>, not 3. The B, E, S synths also require <a href="http://numpy.scipy.org/">NumPy</a>.</p>
 
 <h3>PySynth &ldquo;A&rdquo;</h3>
 
-<p>This synth is very simple and sounds vaguely like a flute or organ. Only <a href="http://www.python.org/">Python v2.x</a> (not 3.x!) itself is needed for PySynth A. It should run on all Python-supported platforms, like Windows, Unix, and the Mac.</p>
+<p>This synth is very simple and sounds vaguely like a flute or organ. Only Python itself is needed for PySynth A. It should run on all Python-supported platforms, like Windows, Unix, and the Mac.</p>
 
 <h3>PySynth &ldquo;B&rdquo;</h3>
 
@@ -162,15 +162,15 @@
 
 <p>This module simulates a single plucked string with the <a href="http://en.wikipedia.org/wiki/Karplus-Strong_string_synthesis">Karplus-Strong algorithm</a> (think guitar or harpsichord). Due to the nature of this kind of synthesis, <b>higher frequency-notes in particular can be slightly out of tune with PySynth S</b>, as opposed to the other variants where the harmonics are exact. This could be remedied with a higher sampling rate, but that would also make it a little slow for Python.</p>
 
-<p>Note that PySynth B and S require <a href="http://numpy.scipy.org/">NumPy</a> in addition to Python itself, but binary installation packages are available for Windows / Linux / OS X, so this should not be a problem.</p>
-
 <h3>PySynth beeper</h3>
 
 <p>This belongs to <tt>nokiacomposer2wav.py</tt>.</p>
 
+<hr>
+
 <h2>Controller scripts</h2>
 
-<p>(These scripts serve as more convenient ways to drive the actual synthesizers.)</p>
+<p>These scripts serve as more convenient ways to drive the actual synthesizers.</p>
 
 <h3>ABC parser</h3>
 
