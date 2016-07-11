@@ -176,7 +176,7 @@
 
 <p>PySynth has some basic support for music in the <a hreF="http://abcnotation.org.uk/">ABC notation language</a>. The script needs the location of the ABC song file (either local or via http), optionally followed by the song number (defaults to 1):</p>
 
-<pre>% python read_abc.py http://trillian.mit.edu/~jc/music/abc/Germany/LiliMarlen.abc</pre>
+<pre>% python read_abc.py http://mdoege.github.io/PySynth/LiliMarlen.abc.txt</pre>
 
 <p>&rArr; <a href="marlen.mp4">Lili Marleen.mp4</a></p>
 
@@ -212,10 +212,6 @@
 
 <pre>
 % <b>python</b>
-ActivePython 2.5.0.0 (ActiveState Software Inc.) based on
-Python 2.5 (r25:51908, Mar  9 2007, 17:40:37) 
-[GCC 4.0.1 (Apple Computer, Inc. build 5250)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
 >>> <b>import pysynth</b>
 >>> <b>test = ( ('c', 4), ('e', 4), ('g', 4), ('c5', 1) )</b>
 >>> <b>pysynth.make_wav(test, fn = "test.wav")</b>
