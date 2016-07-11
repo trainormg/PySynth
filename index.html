@@ -90,7 +90,7 @@
 
 <p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.org.uk/">ABC notation</a> into a WAV file without too much tinkering.</p>
 
-<p>There are four variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.scipy.org/">NumPy</a>. It's supposed to be a little closer to a piano. No competition for Pianoteq of course, but a reasonable fit for keyboard music. PySynth E is similar, but an FM-synthesized e-piano so it sounds much brighter than B (slightly DX7 e-piano-like; I used the DX7 presets in <a href="http://dssi.sourceforge.net/hexter.html">hexter</a> as a basis). Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
+<p>There are four variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.org/">NumPy</a>. It's supposed to be a little closer to a piano. No competition for Pianoteq of course, but a reasonable fit for keyboard music. PySynth E is similar, but an FM-synthesized e-piano so it sounds much brighter than B (slightly DX7 e-piano-like; I used the DX7 presets in <a href="http://dssi.sourceforge.net/hexter.html">hexter</a> as a basis). Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
 
 <p>The current release of the synthesizer is monophonic, i.e. it can only play one note at a time.  (Although successive notes can overlap in PySynth B and S, but not A.)  However, two output files can be mixed together as in the case of the stereo files below.</p>
 
@@ -132,7 +132,7 @@
 
 <p><b>V1.0</b> added interactive song creation and playback via <tt>menv.py</tt>. This CLI allows you to enter notes and hear them played back as synthesized by PySynth. Thanks, Pranav!</p>
 
-<p><b>V0.9</b> introduced a <a href="http://cuu508.wordpress.com/2011/04/12/ringtonesynth/">Nokia ringtone synthesizer</a> module, contributed by <a href="https://github.com/cuu508">P&#275;teris Caune</a>. (Run <tt>nokiacomposer2wav.py</tt> to generate some audio samples. He also provides an <a href="http://ringtonesynth.appspot.com/">online version</a>.) Thanks, Pete!</p>
+<p><b>V0.9</b> introduced a <a href="http://cuu508.wordpress.com/2011/04/12/ringtonesynth/">Nokia ringtone synthesizer</a> module, contributed by <a href="https://github.com/cuu508">P&#275;teris Caune</a>. (Run <tt>nokiacomposer2wav.py</tt> to generate some audio samples.) Thanks, Pete!</p>
 
 <p><b>V0.8</b>: Improved support for ABC notation features such as tuplets and song tempo; better performance and sound of PySynth &ldquo;S&rdquo;.</p>
 
@@ -144,7 +144,7 @@
 
 <h2><a name="m">Synthesizer modules</a></h2>
 
-<p>These modules take a list of notes and note lengths and use it to create a WAV file. Currently, they all require <a href="http://www.python.org/">Python v2.x</a>, not 3. The B, E, S synths also require <a href="http://numpy.scipy.org/">NumPy</a>.</p>
+<p>These modules take a list of notes and note lengths and use it to create a WAV file. Currently, they all require <a href="http://www.python.org/">Python v2.x</a>, not 3. The B, E, S synths also require <a href="http://numpy.org/">NumPy</a>.</p>
 
 <h3>PySynth &ldquo;A&rdquo;</h3>
 
@@ -250,7 +250,7 @@ Writing to file <a href="danube.wav">danube.wav</a>
 
 <p>For more convenient note entry, you can e.g. use the <b>ABC notation importer</b>:</p>
 
-<p>This is an example from the <a href="http://trillian.mit.edu/~jc/music/abc/doc/ABCprimer.html">ABC documentation</a>:</p>
+<p>This is an example from the <a href="https://web.archive.org/web/20160323214714/http://trillian.mit.edu/~jc/music/abc/doc/ABCprimer.html">ABC documentation</a>:</p>
 
 <pre>
 X: 1
