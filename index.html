@@ -88,7 +88,7 @@
 <a href="#c">Contact</a>
 </p></center>
 
-<p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.org.uk/">ABC notation</a> into a WAV file without too much tinkering.</p>
+<p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.org.uk/">ABC notation</a> (and also <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> files in the PySynth git version) into a WAV file without too much tinkering.</p>
 
 <p>There are four variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.org/">NumPy</a>. It's supposed to be a little closer to a piano. No competition for Pianoteq of course, but a reasonable fit for keyboard music. PySynth E is similar, but an FM-synthesized e-piano so it sounds much brighter than B (slightly DX7 e-piano-like; I used the DX7 presets in <a href="http://dssi.sourceforge.net/hexter.html">hexter</a> as a basis). Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
 
@@ -180,7 +180,7 @@
 
 <p>PySynth has some basic support for music in the <a hreF="http://abcnotation.org.uk/">ABC notation language</a>. The script needs the location of the ABC song file (either local or via http), optionally followed by the song number (defaults to 1):</p>
 
-<pre>% python read_abc.py http://mdoege.github.io/PySynth/LiliMarlen.abc.txt</pre>
+<pre>python read_abc.py http://mdoege.github.io/PySynth/LiliMarlen.abc.txt</pre>
 
 <p>&rArr; <a href="marlen.mp4">Lili Marleen.mp4</a></p>
 
@@ -193,6 +193,12 @@
     modules, respectively, instead of the default PySynth A</pre>
 
 <p>If you need a quick way to edit, visualize, and&mdash;in supported browsers&mdash;play an ABC music file, take a look at <a href="http://waterpigs.co.uk/pig/">ABCPig</a>.</p>
+
+<h3>MIDI reader (only in the git version of PySynth right now)</h3>
+
+<p>Synthesize one track from a MIDI file with PySynth A, defaults to track 1:</p>
+
+<pre>python readmidi.py file.mid [tracknum] [file.wav]</pre>
 
 <h3>Stereo mixer</h3>
 
