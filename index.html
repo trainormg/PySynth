@@ -89,7 +89,7 @@
 <a href="#c">Contact</a>
 </p></center>
 
-<p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.com/">ABC notation</a> (and also <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> files in the PySynth git version) into a WAV file without too much tinkering.</p>
+<p><b>PySynth</b> is a simple music synthesizer written in <a href="http://www.python.org/">Python 3</a>. It&rsquo;s based on a script I found on the Web and then modified for my purposes. The goal is not to produce many different sounds, but to have scripts that can turn <a hreF="http://abcnotation.com/">ABC notation</a> or <a href="https://en.wikipedia.org/wiki/MIDI">MIDI</a> files into a WAV file without too much tinkering.</p>
 
 <p>There are four variants: PySynth A is faster, only needs Python itself, and sounds more like a cross between a flute and organ. PySynth B is more complex in sound and needs <a href="http://numpy.org/">NumPy</a>. It's supposed to be a little closer to a piano. No competition for Pianoteq of course, but a reasonable fit for keyboard music. PySynth E is similar, but an FM-synthesized e-piano so it sounds much brighter than B (slightly DX7 e-piano-like; I used the DX7 presets in <a href="http://dssi.sourceforge.net/hexter.html">hexter</a> as a basis). Finally, PySynth S is more comparable to a guitar, banjo, or harpsichord, depending on note length and pitch.</p>
 
@@ -120,13 +120,15 @@
 </ul>
 <hr>
 
-<h2><a name="d">Download the stable release (Python 2)</a></h2>
+<h2><a name="d">Download a stable release</a></h2>
 
-<p>Current <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archive of all PySynth modules:</p>
+<p>Here are <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archives of all PySynth modules:</p>
 
-<p align="center"><tt><a href="PySynth-1.1.tar.gz">PySynth-1.1.tar.gz</a></tt>&nbsp;<small>(2015-01-03)</small></p>
+<p align="center"><tt><a href="PySynth-2.0.tar.gz">PySynth-2.0.tar.gz</a></tt>&nbsp;<small>(2017-06-11; for Python 3)</small></p>
 
-<h2><a name="d">Download the git version (Python 3)</a></h2>
+<p align="center"><tt><a href="PySynth-1.1.tar.gz">PySynth-1.1.tar.gz</a></tt>&nbsp;<small>(2015-01-03; final version for Python 2)</small></p>
+
+<h2><a name="d">Download the git version</a></h2>
 
 <p>You can <a href="https://github.com/mdoege/PySynth">browse the repository</a> at <a href="https://github.com/">GitHub</a> or obtain the source code with <a href="http://git-scm.com/">git</a> like this:<br>&nbsp;&nbsp;<tt>git clone git://github.com/mdoege/PySynth.git</tt></p>
 
@@ -135,6 +137,8 @@
 <hr>
 
 <h2><a name="h">Changes</a></h2>
+
+<p><b>V2.0</b> switches to Python 3, adds the MIDI reader <tt>readmidi.py</tt>, and incorporates several pull requests with bug fixes and improvements.</p>
 
 <p><b>V1.1</b> adds the pysynth_e FM synth module and <tt>mixfiles.py</tt>.</p>
 
@@ -154,7 +158,7 @@
 
 <h2><a name="m">Synthesizer modules</a></h2>
 
-<p>These modules take a list of notes and note lengths and use it to create a WAV file. Currently, they all require <a href="http://www.python.org/">Python v2.x</a>, not 3 (although the <a href="https://github.com/mdoege/PySynth/archive/master.zip">latest git version of PySynth</a> has Python 3 support). The B, E, S synths also require <a href="http://numpy.org/">NumPy</a>.</p>
+<p>These modules take a list of notes and note lengths and use it to create a WAV file. The B, E, S synths also require <a href="http://numpy.org/">NumPy</a>.</p>
 
 <h3>PySynth &ldquo;A&rdquo;</h3>
 
@@ -186,7 +190,7 @@
 
 <p>PySynth has some basic support for music in the <a hreF="http://abcnotation.org.uk/">ABC notation language</a>. The script needs the location of the ABC song file (either local or via http), optionally followed by the song number (defaults to 1):</p>
 
-<pre>python read_abc.py http://mdoege.github.io/PySynth/LiliMarlen.abc.txt</pre>
+<pre>python3 read_abc.py http://mdoege.github.io/PySynth/LiliMarlen.abc.txt</pre>
 
 <p>&rArr; <a href="marlen.mp4">Lili Marleen.mp4</a></p>
 
@@ -200,15 +204,15 @@
 
 <p>If you need a quick way to edit, visualize, and&mdash;in supported browsers&mdash;play an ABC music file, take a look at <a href="http://waterpigs.co.uk/pig/">ABCPig</a>.</p>
 
-<h3>MIDI reader (only in the git version of PySynth right now)</h3>
+<h3>MIDI reader</h3>
 
 <p>Synthesize one track from a MIDI file with PySynth A, defaults to track 1:</p>
 
-<pre>python readmidi.py file.mid [tracknum] [file.wav]</pre>
+<pre>python3 readmidi.py file.mid [tracknum] [file.wav]</pre>
 
 <h3>Stereo mixer</h3>
 
-<p><tt>mixfiles.py</tt> mixes two mono audio files to create a stereo file, e.g.: <tt>python2 mixfiles.py right.wav left.wav both.wav</tt></p>
+<p><tt>mixfiles.py</tt> mixes two mono audio files to create a stereo file, e.g.: <tt>python3 mixfiles.py right.wav left.wav both.wav</tt></p>
 
 <h3>Interactive command line environment</h3>
 
@@ -227,7 +231,7 @@
 <p>The script can be used as a module by other Python programs or the interactive Python shell:</p>
 
 <pre>
-% <b>python</b>
+% <b>python3</b>
 >>> <b>import pysynth</b>
 >>> <b>test = ( ('c', 4), ('e', 4), ('g', 4), ('c5', 1) )</b>
 >>> <b>pysynth.make_wav(test, fn = "test.wav")</b>
@@ -292,7 +296,7 @@ B/c/ \
 
 <p>Creating the audio with:</p>
 
-<pre>python read_abc.py straw.abc</pre>
+<pre>python3 read_abc.py straw.abc</pre>
 
 <p>gives you <a href="straw.mp4">this file</a>.</p>
 
@@ -311,7 +315,7 @@ B/c/ \
 <h3>Sample program output</h3>
 
 <pre>
-% <b>time python pysynth.py</b>
+% <b>time python3 pysynth.py</b>
 Piano key frequencies (for equal temperament):
 Key number      Scientific name Frequency (Hz)
          1                   A0          27.50
