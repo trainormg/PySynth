@@ -100,22 +100,31 @@
 <hr>
 
 <h2><a name="e">Audio samples</a></h2>
-<p>Here are some WAV output files converted to MP4 format:</p>
+<p>Here are some WAV output files converted to MP3 or MP4 format:</p>
 
 <ul>
 <li>Mono:</li>
 <ul>
-<li><a href="pysynth_anthem.mp4">American Anthem</a> &mdash; PySynth <b>A</b></li>
-<li><a href="pysynth_chopin.mp4">Beginning of a Chopin Nocturne</a> &mdash; PySynth <b>B</b></li>
-<li><a href="menuet.mp4">Bach: <i>Menuet in G</i></a> &mdash; PySynth <b>S</b> &sim; <a href="menuet.abc.txt">abc source</a></li>
-<li><a href="sailors_hornpipe.mp4"><i>The Sailor&rsquo;s Hornpipe</i></a> &mdash; PySynth <b>S</b> &sim; <a href="sailor.abc.txt">abc source</a></li>
+<li><a href="pysynth_anthem.mp4">American Anthem</a> &mdash; PySynth <b>A</b>
+<br><audio src="pysynth_anthem.mp4" controls></audio></li>
+<li><a href="pysynth_chopin.mp4">Beginning of a Chopin Nocturne</a> &mdash; PySynth <b>B</b>
+<br><audio src="pysynth_chopin.mp4" controls></audio></li>
+<li><a href="menuet.mp4">Bach: <i>Menuet in G</i></a> &mdash; PySynth <b>S</b> &sim; <a href="menuet.abc.txt">abc source</a>
+<br><audio src="menuet.mp4" controls></audio></li>
+<li><a href="sailors_hornpipe.mp4"><i>The Sailor&rsquo;s Hornpipe</i></a> &mdash; PySynth <b>S</b> &sim; <a href="sailor.abc.txt">abc source</a>
+<br><audio src="sailors_hornpipe.mp4" controls></audio></li>
 </ul>
 
 <li>Stereo:</li>
 <ul>
-<li><a href="epiano.mp4">Bach: Invention #13, BWV 784</a> &mdash; PySynth <b>E</b> &sim; <a href="bach_invention_13.abc.txt">abc source</a></li>
-<li><a href="pysynth_bach.mp4">Bach: Bourree from BWV 996</a> &mdash; PySynth <b>B</b></li>
-<li><a href="jesu.mp4">Bach: <i>Jesu, Joy of Man&rsquo;s Desiring</i></a> &mdash; PySynth <b>S</b> (treble) and <b>B</b> (bass) &sim; <a href="jesu.abc.txt">abc source</a></li>
+<li><a href="popcorn.mp3">Hot Butter: Popcorn</a> &mdash; seven MIDI tracks mixed in <a href="http://www.audacityteam.org/">Audacity</a>: PySynth <b>C</b> (2x), <b>D</b>, <b>E</b>, <b>P</b>, and <b>S</b> (2x)
+<br><audio src="popcorn.mp3" controls></audio></li>
+<li><a href="epiano.mp4">Bach: Invention #13, BWV 784</a> &mdash; PySynth <b>E</b> &sim; <a href="bach_invention_13.abc.txt">abc source</a>
+<br><audio src="epiano.mp4" controls></audio></li>
+<li><a href="pysynth_bach.mp4">Bach: Bourree from BWV 996</a> &mdash; PySynth <b>B</b>
+<br><audio src="pysynth_bach.mp4" controls></audio></li>
+<li><a href="jesu.mp4">Bach: <i>Jesu, Joy of Man&rsquo;s Desiring</i></a> &mdash; PySynth <b>S</b> (treble) and <b>B</b> (bass) &sim; <a href="jesu.abc.txt">abc source</a>
+<br><audio src="jesu.mp4" controls></audio></li>
 </ul>
 </ul>
 <hr>
@@ -162,7 +171,7 @@
 
 <h2><a name="m">Synthesizer modules</a></h2>
 
-<p>These modules take a list of notes and note lengths and use it to create a WAV file. The B, E, S synths also require <a href="http://numpy.org/">NumPy</a>.</p>
+<p>These modules take a list of notes and note lengths and use it to create a WAV file. The B, E, and S synths also require <a href="http://numpy.org/">NumPy</a>.</p>
 
 <h3>PySynth &ldquo;A&rdquo;</h3>
 
