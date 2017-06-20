@@ -184,6 +184,10 @@
 
 <p>Based on PySynth B, this module creates a simple e-piano sound based on phase modulation, the usual method of doing FM synthesis e.g. on 1980s Yamaha synthesizers.</p>
 
+<h3>PySynth &ldquo;P&rdquo;</h3>
+
+<p>PySynth P (in latest git) uses subtractive synthesis like PySynth C and D, but is based on white noise with an exponential volume envelope. It creates an untuned percussion sound. This type of sound was commonly used in the 1980s for percussive and game sound effects. Only Python itself is required.</p>
+
 <h3>PySynth &ldquo;S&rdquo;</h3>
 
 <p>This module simulates a single plucked string with the <a href="http://en.wikipedia.org/wiki/Karplus-Strong_string_synthesis">Karplus-Strong algorithm</a> (think guitar or harpsichord). Due to the nature of this kind of synthesis, higher frequency-notes in particular can be slightly out of tune with PySynth S, as opposed to the other variants where the harmonics are exact. This could be remedied with a higher sampling rate, but that would also make it a little slow for Python.</p>
