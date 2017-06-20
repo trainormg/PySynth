@@ -221,19 +221,19 @@
 
 <p>Detailed usage:</p>
 
-<pre>read_abc.py filename [num_song] [--syn_b/--syn_e/--syn_s]
+<pre>read_abc.py filename [num_song] [--syn_b/--syn_c/--syn_d/--syn_e/--syn_p/--syn_s]
 
 * num_song selects the song in the file corresponding to the number given
-* --syn_b, --syn_e, and --syn_s can be added to use the PySynth B/E/S
-    modules, respectively, instead of the default PySynth A</pre>
+* --syn_b, --syn_e, --syn_s, etc. can be added to use other PySynth
+    modules instead of the default PySynth A</pre>
 
 <p>If you need a quick way to edit, visualize, and&mdash;in supported browsers&mdash;play an ABC music file, take a look at <a href="http://waterpigs.co.uk/pig/">ABCPig</a>.</p>
 
 <h3>MIDI reader</h3>
 
-<p>Synthesize one track from a MIDI file with PySynth A, defaults to track 1:</p>
+<p>Synthesize one track from a MIDI file with PySynth (defaults to MIDI track 1):</p>
 
-<pre>python3 readmidi.py file.mid [tracknum] [file.wav]</pre>
+<pre>python3 readmidi.py file.mid [tracknum] [file.wav] [--syn_b/--syn_c/--syn_d/--syn_e/--syn_p/--syn_s]</pre>
 
 <h3>Stereo mixer</h3>
 
