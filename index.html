@@ -115,7 +115,7 @@
 <br><audio src="sailors_hornpipe.mp4" controls></audio></li>
 </ul>
 
-<li>Stereo:</li>
+<a name="pop"></a><li>Stereo:</li>
 <ul>
 <li><a href="popcorn.mp3">Hot Butter: <i>Popcorn</i></a> &mdash; 8 MIDI tracks mixed in <a href="http://www.audacityteam.org/">Audacity</a>: PySynth <b>A</b>, <b>C</b> (2x), <b>D</b>, <b>E</b>, <b>P</b>, and <b>S</b> (2x)  &sim; <a href="popcorn.txt">shell script</a>
 <br><audio src="popcorn.mp3" controls></audio></li>
@@ -133,7 +133,7 @@
 
 <p>Here are <tt><a href="http://en.wikipedia.org/wiki/Tar_(file_format)">tar.gz</a></tt> archives of all PySynth modules:</p>
 
-<p align="center"><tt><a href="PySynth-2.0.tar.gz">PySynth-2.0.tar.gz</a></tt>&nbsp;<small>(2017-06-11; for Python 3)</small></p>
+<p align="center"><tt><a href="PySynth-2.1.tar.gz">PySynth-2.1.tar.gz</a></tt>&nbsp;<small>(2017-06-21; for Python 3)</small></p>
 
 <p align="center"><tt><a href="PySynth-1.1.tar.gz">PySynth-1.1.tar.gz</a></tt>&nbsp;<small>(2015-01-03; final version for Python 2)</small></p>
 
@@ -151,9 +151,11 @@
 
 <h2><a name="h">Changes</a></h2>
 
+<p><b>V2.1</b> adds three subtractive synths: &ldquo;C&rdquo; (sawtooth wave), &ldquo;D&rdquo; (square wave), and &ldquo;P&rdquo; (white noise). Also, <tt>readmidi.py</tt> was improved to deal better with overlapping notes and notes that are switched off by setting their velocity to zero. MIDI rendering seems to work quite well now, as evidenced by the new <a href="#pop"><i>Popcorn</i> demo song</a>.</p>
+
 <p><b>V2.0</b> switches to Python 3, adds the MIDI reader <tt>readmidi.py</tt>, and incorporates several pull requests with bug fixes and improvements.</p>
 
-<p><b>V1.1</b> adds the pysynth_e FM synth module and <tt>mixfiles.py</tt>.</p>
+<p><b>V1.1</b> adds the &ldquo;E&rdquo; FM synth module and <tt>mixfiles.py</tt>.</p>
 
 <p><b>V1.0.1</b> fixes a minor issue with Pyglet sound playback and corrects the import path for PyAudio. Thanks again, Pranav!</p>
 
