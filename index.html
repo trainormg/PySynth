@@ -315,6 +315,8 @@ hr:after {  /* Not really supposed to work, but does */
 
 <p><tt>mixfiles.py</tt> mixes two mono audio files to create a stereo file, e.g.: <tt>python3 mixfiles.py right.wav left.wav both.wav</tt></p>
 
+<p>Please note that <tt>mixfiles.py</tt> inputs and outputs 44.1 kHz WAV files, so do not use this with Pysynth &ldquo;samp&rdquo; output (which is 48 kHz) or you will get wrong results.</p>
+
 <h3>Interactive command line environment</h3>
 
 <p>This feature, contributed by <a href="https://github.com/pranavrc">Pranav Ravichandran</a>, is used by running <tt>menv.py</tt>. It is really self-explaining, you enter your desired notes and any optional parameters like bpm on the command line and after you hit return PySynth synthesizes the sound and plays it back via the speakers. Depending on the speed of your computer and the length of the sound, there might be a slight pause between your input and sound playback.</p>
