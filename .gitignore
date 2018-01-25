@@ -1,0 +1,6 @@
+.project
+.pydevproject
+PySynth.egg-info/
+__pycache__/
+
+
